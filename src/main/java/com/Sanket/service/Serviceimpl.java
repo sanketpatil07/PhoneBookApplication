@@ -43,6 +43,17 @@ public class Serviceimpl implements ServiceI{
 		return findById;
 			
 		 }
+
+	@Override
+	public boolean updatecontact(Contact contact) {
+
+		Contact save = contactrepository.save(contact);
+		
+		if(contact!=null) {
+			return true;
+		}else
+		return false;
+	}
 	
 
 	}
